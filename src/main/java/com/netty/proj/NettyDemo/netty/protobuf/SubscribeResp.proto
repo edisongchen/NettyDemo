@@ -1,0 +1,11 @@
+syntax = "proto3"; //protobuf 3的标识,默认为proto2
+package netty.protobuf;
+
+option java_package = "com.netty.proj.NettyDemo.netty.protobuf";
+option java_outer_classname = "SubscribeRespProto";
+
+message SubscribeResp {
+ int32 subReqID =1;
+ int32 respCode =2;
+ string desc = 3;
+}
