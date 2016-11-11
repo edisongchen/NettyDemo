@@ -39,7 +39,7 @@ public class SubReqServer {
                         protected void initChannel(SocketChannel ch) throws Exception {
                             //半包处理
                             ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-                            //编码前使用protobuf
+                            //使用protobuf 解码
                             ch.pipeline().addLast(new ProtobufDecoder(SubscribeReqProto.SubscribeReq.getDefaultInstance()));
 
                             ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
