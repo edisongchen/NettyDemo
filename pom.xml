@@ -15,6 +15,7 @@
         <netty.version>4.1.6.Final</netty.version>
         <junit.version>4.11</junit.version>
         <protobuf.version>3.1.0</protobuf.version>
+        <jboss-marshalling.version>1.4.11.Final</jboss-marshalling.version>
     </properties>
 
     <dependencies>
@@ -45,6 +46,21 @@
             <artifactId>protobuf-java</artifactId>
             <version>${protobuf.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jboss.marshalling/jboss-marshalling -->
+        <dependency>
+            <groupId>org.jboss.marshalling</groupId>
+            <artifactId>jboss-marshalling</artifactId>
+            <version>1.4.11.Final</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jboss.marshalling/jboss-marshalling-serial -->
+        <dependency>
+            <groupId>org.jboss.marshalling</groupId>
+            <artifactId>jboss-marshalling-serial</artifactId>
+            <version>${jboss-marshalling.version}</version>
+        </dependency>
+
 
 
     </dependencies>
