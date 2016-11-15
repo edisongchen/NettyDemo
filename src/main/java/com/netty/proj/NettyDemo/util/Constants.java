@@ -1,6 +1,7 @@
 package com.netty.proj.NettyDemo.util;
 
 /**
+ * 相关常量类
  * Created by ctg on 2016/11/9.
  */
 public class Constants {
