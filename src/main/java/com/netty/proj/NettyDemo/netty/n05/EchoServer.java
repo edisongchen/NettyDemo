@@ -32,9 +32,9 @@ public class EchoServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-//                            ByteBuf delimiter = Unpooled.copiedBuffer(Constants.DELIMITER_$_.getBytes());
-//                            ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,delimiter));
-                            ch.pipeline().addLast(new FixedLengthFrameDecoder(20));
+                            ByteBuf delimiter = Unpooled.copiedBuffer(Constants.DELIMITER_$_.getBytes());
+                            ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,delimiter));
+//                            ch.pipeline().addLast(new FixedLengthFrameDecoder(20));
                             ch.pipeline().addLast(new StringDecoder());
                             ch.pipeline().addLast(new EchoServerHandler());
                         }
